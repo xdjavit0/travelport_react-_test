@@ -10,4 +10,4 @@ const DefaultCard = ({ name, surname, photo, email }) => {
       </Card>
     )
   }
-  export default DefaultCard
+export default DefaultCard

@@ -4,7 +4,7 @@ export const Card = styled.div`
 justify-content:center;
 margin: 0.5rem;
 height:4.5rem;
-width: 18.75rem;
+width: 21.5rem;
 `
 export const Name = styled.p`
 font-weight:bold;
