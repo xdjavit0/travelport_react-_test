@@ -1,23 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import DefaultCard from '../src/components/DefaultCard/index'
+import data from '../src/App_mockdata'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data.map((person, index) =><DefaultCard key={index} name={person.name.first} surname={person.name.last} photo={person.picture.medium} email={person.email}/>)}
     </div>
   );
 }
