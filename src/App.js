@@ -1,21 +1,32 @@
-import './App.css';
+import axios from "axios"
+import './App.css'
 import DefaultCard from '../src/components/DefaultCard/index'
-import data from '../src/App_mockdata'
+// import apiData from '../src/App_mockdata'
 import DefaultButton from '../src/components/DefaultButton/index'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 let position = 0;
 
+const baseURL = "https://randomuser.me/api/?results=5";
 
 function App() {
+
+  const [apiData, setApiData] = useState({})
+
+  useEffect(() => {
+    axios.get(baseURL).then((response) => {
+      setApiData(response.data)
+    });
+  }, []);
+
   const [personState, setPersonState] = useState([])
 
   const onClickDefaultButton = () => {
-    if (position === data.length) {
+    if (position === apiData.results.length) {
       setPersonState([])
       position = 0;
     }else{
-      setPersonState([...personState, data[position]])
+      setPersonState([...personState, apiData.results[position]])
       position++;
     }
   }
