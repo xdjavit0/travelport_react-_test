@@ -1,6 +1,6 @@
 import './App.css'
 import DefaultCard from '../src/components/DefaultCard/index'
-import useFetch from '../src/App_mockdata'
+import useFetch from './App_getApiInfo'
 import DefaultButton from '../src/components/DefaultButton/index'
 import React, { useState } from 'react'
 
