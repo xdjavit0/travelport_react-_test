@@ -9,7 +9,7 @@ const DefaultButton = ({ text = "click", onclick = null }) => {
         }
     }
     return (
-        <Button onClick={event=> {sendState(event)}}>{text}</Button>
+        <Button className='DefaultButton' data-testid='Button' onClick={event=> {sendState(event)}}>{text}</Button>
     )
 }
 export default DefaultButton
