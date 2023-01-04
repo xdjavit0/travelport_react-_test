@@ -5,7 +5,7 @@ import { Button } from '../DefaultButton/styles.js'
 const DefaultButton = ({ text = "click", onclick = null }) => {
     const sendState = (event) => {
         if (onclick !== null) {
-          onclick();
+          onclick()
         }
     }
     return (

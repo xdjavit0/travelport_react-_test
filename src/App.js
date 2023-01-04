@@ -13,7 +13,7 @@ function App() {
   const onClickDefaultButton = () => {
     if (position === data.length) {
       setPersonState([])
-      position = 0;
+      position = 0
     }else{
       setPersonState([...personState, data[position]])
       position++;
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
